@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".gusseing_screen">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-66dp"
+        tools:layout_editor_absoluteY="37dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="40dp">
+            <TextView
+                android:id="@+id/score_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/score_for_the_game"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.024"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <VideoView
+                android:id="@+id/videoView2"
+                android:layout_width="314dp"
+                android:layout_height="414dp"
+                android:layout_gravity="center"
+                android:onClick="start_again"
+                android:layout_marginTop="30dp"
+                android:keepScreenOn="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="240dp"
+                android:layout_height="75dp"
+                android:onClick="download"
+                android:text="@string/click_to_play_the_video_it_may_took_a_few_seconds"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/videoView2" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="337dp"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="@string/do_you_think_it_was_a_lie_or_maybe_the_truth"
+                app:layout_constraintBottom_toTopOf="@+id/true_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/videoView2"
+                app:layout_constraintVertical_bias="0.842" />
+
+            <Button
+                android:id="@+id/false_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="68dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:onClick="false_button"
+                android:text="@string/False"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.466" />
+
+            <Button
+                android:id="@+id/true_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-70dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginBottom="24dp"
+                android:onClick="true_button"
+                android:text="@string/True"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.534"
+                app:layout_constraintStart_toEndOf="@+id/false_button"
+                android:layout_marginStart="-70dp" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
